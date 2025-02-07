@@ -8,8 +8,6 @@ import EditExercise from "./components/edit-exercise.component.js";
 import CreateExercise from "./components/create-exercise.component";
 import CreateUser from "./components/create-user.component";
 
-// 1:00:51
-
 function App() {
   return (
     <Router>
@@ -17,7 +15,7 @@ function App() {
         <Navbar />
         <br />
         <Routes>
-          <Route path="/" element={<ExercisesList />} />
+          <Route path="/" exact element={<ExercisesList />} />
           <Route path="/edit/:id" element={<EditExercise />} />
           <Route path="/create" element={<CreateExercise />} />
           <Route path="/user" element={<CreateUser />} />
